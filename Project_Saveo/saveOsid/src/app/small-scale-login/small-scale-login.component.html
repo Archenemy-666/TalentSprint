@@ -1,0 +1,85 @@
+<!-- 
+<h1 align="center">Small-Scale Hospital Login</h1>
+
+<form #smallScaleLoginForm = "ngForm" (ngSubmit) = "SubmitSmallScaleDetails(smallScaleLoginForm.value)">
+    <div align="center">
+        <input type="text" placeholder="Small-Scale-Hospital-Id" name = "smallScaleId" ngModel><br/>
+        <input type="password" placeholder="password" name = "password" ngModel><br/>
+        <button>Login</button><br/>
+    </div>
+</form> 
+</body> -->
+
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+</head>   
+
+
+<!-- navbar -->
+<div class="navbar">
+    <a href="#">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Corporate
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink = "../corporateRegister">CorporateRegister</a>
+        <a routerLink = "../corporateLogin">CorporateLogin</a>
+      </div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">SmallScale
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a routerLink = "../smallScaleRegister">SmallScaleRegister</a>
+		  <a routerLink = "../smallScaleLogin">SmallScaleLogin</a>
+		</div>
+	  </div>
+  </div>
+
+
+  
+<body>
+<div class="page-body" >
+    <div class="auth-form-wrapper register-form-wrapper">
+        <form #smallScaleLoginForm="ngForm" (ngSubmit)="  SubmitSmallScaleDetails(smallScaleLoginForm.value)">
+        
+            <div class="form-header">
+                <h2 class="text-center">SmallScale Login</h2>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="smallScaleId" type="text" class="" name="smallScaleId" ngModel value="" required="" autofocus="">
+                    <label for="smallScaleId">SmallScale HospitalId</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="password" type="password" class="" name="password" ngModel value="" required="" autofocus="">
+                    <label for="password">Password</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-action">
+                <div>
+                    <button type="submit" class="btn btn-primary">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 
+</body>

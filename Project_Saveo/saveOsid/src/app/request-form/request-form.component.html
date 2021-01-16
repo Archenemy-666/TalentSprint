@@ -1,0 +1,68 @@
+<div class="navbar">
+    <a href="#">Home</a>
+    <a  hrouterLink = "../requestForm">RequestForm</a>
+    <a href="#">Market</a>
+ </div>
+
+
+
+ <!-- .....................form................................... -->
+
+
+
+ <body>
+    <div class="page-body" >
+        <div class="auth-form-wrapper register-form-wrapper">
+            <form #smallScaleRequestForm="ngForm" (ngSubmit)="  SubmitSmallScaleRequest(smallScaleRequestForm.value)">
+            
+                <div class="form-header">
+                    <h2 class="text-center">SmallScale Request Form </h2>
+                </div>
+    
+                <div class="form-row">
+                    <div class="input-wrapper">
+                        <label for="smallScaleName">{{smallScaleName}}</label>
+                        <span class="icon-wrapper bg-primary">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="input-wrapper">
+                        <input id="requirement" type="text" class="" name="requirement" ngModel value="" required="" autofocus="">
+                        <label for="requirement">Requirement</label>
+                        <span class="icon-wrapper bg-primary">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-wrapper">
+                        <input id="quantity" type="number" class="" name="quantity" ngModel value="" required="" autofocus="">
+                        <label for="quantity">quantity</label>
+                        <span class="icon-wrapper bg-primary">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-wrapper">
+                        <input id="expiryDate" type="date" class="" name="expiryDate" ngModel value="" required="" autofocus="">
+                        <label for="expiryDate">RequiremenExpires on </label>
+                        <span class="icon-wrapper bg-primary">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <div>
+                        <button type="submit" class="btn btn-primary">
+                            Create Request 
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> 
+    </body>

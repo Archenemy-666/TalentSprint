@@ -1,0 +1,125 @@
+<!-- 
+<h1 align="center">Small-Scale Hospital Registration</h1>
+<form #smallScaleRegForm = "ngForm" (ngSubmit) = "registerSmallScale(smallScaleRegForm.value)">
+    <div align="center">
+        <input type="text" placeholder="Small-Scale-Name" name = "smallScaleName" ngModel><br/>
+        <input type="text" placeholder="Small-Scale-Id" name = "smallScaleId" ngModel><br/>
+        <input type="text" placeholder="Location" name = "location" ngModel><br/>
+        <input type="number" placeholder="contact" name = "contact" ngModel><br/>
+        <input type="text" placeholder="EmailId" name = "emailId" ngModel><br/>
+        
+        <input type="password" placeholder="password" name = "password" ngModel><br/>
+        <button>Register</button>
+
+    </div>
+</form> -->
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+</head>   
+
+<!-- navbar -->
+<div class="navbar">
+    <a href="#">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Corporate
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink = "../corporateRegister">CorporateRegister</a>
+        <a routerLink = "../corporateLogin">CorporateLogin</a>
+      </div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">SmallScale
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a routerLink = "../smallScaleRegister">SmallScaleRegister</a>
+		  <a routerLink = "../smallScaleLogin">SmallScaleLogin</a>
+		</div>
+	  </div>
+  </div>
+
+<!-- register page -->
+<body>
+<div class="page-body" >
+    <div class="auth-form-wrapper register-form-wrapper">
+        <form #smallScaleRegForm="ngForm" (ngSubmit)="  registerSmallScale(smallScaleRegForm.value)">
+        
+            <div class="form-header">
+                <h2 class="text-center">SmallScale Register</h2>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="smallScaleName" type="text" class="" name="smallScaleName" ngModel value="" required="" autofocus="">
+                    <label for="smallScaleName">smallScaleName</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="smallScaleId" type="text" class="" name="smallScaleId" ngModel value="" required="" autofocus="">
+                    <label for="smallScaleId">SmallScale HospitalId</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="location" type="text" class="" name="location" ngModel value="" required="" autofocus="">
+                    <label for="location">Location</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="contact" type="number" class="" name="contact" ngModel value="" required="" autofocus="">
+                    <label for="contact">contact</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="emailId" type="text" class="" name="emailId" ngModel value="" required="" autofocus="">
+                    <label for="emailId">EmailId</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="password" type="password" class="" name="password" ngModel value="" required="" autofocus="">
+                    <label for="password">Password</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-action">
+                <div>
+                    <button type="submit" class="btn btn-primary">
+                        Register
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 
+</body>
