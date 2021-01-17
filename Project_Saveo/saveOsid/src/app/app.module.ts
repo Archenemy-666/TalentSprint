@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { SmallScaleHomeComponent } from './small-scale-home/small-scale-home.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { CorporateHomeComponent } from './corporate-home/corporate-home.component';
+import { SmallScaleMarketComponent } from './small-scale-market/small-scale-market.component';
 
 const appRoot: Routes=[{path:'',component:CorporateRegisterComponent},
 {path:'corporateRegister',component:CorporateRegisterComponent},
@@ -22,6 +23,7 @@ const appRoot: Routes=[{path:'',component:CorporateRegisterComponent},
 {path:'smallScaleHome',component:SmallScaleHomeComponent},
 {path:'requestForm',component:RequestFormComponent},
 {path:'smallScaleLogin',component:SmallScaleLoginComponent},
+{path:'smallScaleMarket',component:SmallScaleMarketComponent},
 {path:'corporateHome',component:CorporateHomeComponent}
 ];
 
@@ -36,7 +38,8 @@ const appRoot: Routes=[{path:'',component:CorporateRegisterComponent},
     HeaderComponent,
     SmallScaleHomeComponent,
     RequestFormComponent,
-    CorporateHomeComponent
+    CorporateHomeComponent,
+    SmallScaleMarketComponent
   ],
   imports: [
     BrowserModule,

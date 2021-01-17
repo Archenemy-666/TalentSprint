@@ -21,7 +21,9 @@
     
                 <div class="form-row">
                     <div class="input-wrapper">
-                        <label for="smallScaleName">{{smallScaleName}}</label>
+                        <select type = "text" name = "smallScaleName" ngModel>
+                            <option value="{{smallScaleName}}">{{smallScaleName}}</option> 
+                        </select><br/>
                         <span class="icon-wrapper bg-primary">
                             <i class="fas fa-user"></i>
                         </span>
@@ -49,7 +51,7 @@
                 <div class="form-row">
                     <div class="input-wrapper">
                         <input id="expiryDate" type="date" class="" name="expiryDate" ngModel value="" required="" autofocus="">
-                        <label for="expiryDate">RequiremenExpires on </label>
+                        <label for="expiryDate">Requirement Expires on </label>
                         <span class="icon-wrapper bg-primary">
                             <i class="fas fa-lock"></i>
                         </span>
