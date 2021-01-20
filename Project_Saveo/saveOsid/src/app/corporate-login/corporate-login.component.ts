@@ -22,9 +22,9 @@ export class CorporateLoginComponent implements OnInit {
       if(this.corporate != null){
         CorporateLoginComponent.corporateName = this.corporate.corporateName ;
         this.router.navigate(['corporateHome']);
-        return alert("successful");
+        //return alert("successful");
       }
-      return alert("unsuccessful");
+      //return alert("unsuccessful");
   
   }
 }

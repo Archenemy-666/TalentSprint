@@ -21,9 +21,9 @@ export class SmallScaleLoginComponent implements OnInit {
       if(this.smallScale != null){
         SmallScaleLoginComponent.smallName = this.smallScale.smallScaleName ;
         this.router.navigate(['smallScaleHome']);
-        return alert("successful");
+      
       }
-      return alert("unsuccessful");
+      
   }
 
 }

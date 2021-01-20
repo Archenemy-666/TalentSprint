@@ -1,34 +1,36 @@
-<div class="navbar">
-    <a href="#">Home</a>
-    <a href="#" routerLink = "../requestForm">RequestForm</a>
-    <a href="#">Market</a>
-    <a href="#">Logout</a>
- </div>
+<div>
+    <div class="navbar">
+        <a href="#" routerLink = "../smallScaleHome">Home</a>
+        <a href="#" routerLink = "../requestForm">RequestForm</a>
+        <a href="#" routerLink = "../smallScaleMarket">Market</a>
+        <a href="#">Logout</a>
+    </div>
 
-<!-- table code -->
-<div class="market">
-<table class="table table-bordered table-striped table-hover tble-sm" border="2px" align="center">
-    <thead>
-    <tr class="bg-info text-white">
-        <th>Small-Scale-Name</th>
-        <th>Requirement</th>
-        <th>Expiry-Date</th>
-        <th>Quantity</th>
-        <th>Status</th>
-       </tr>
-    </thead>
-    <tbody>
-    <tr  *ngFor="let requirement of requirements">
-        <td>{{requirement.smallScaleName}}</td>
-        
-        <td>{{requirement.requirement}}</td>
-        <td>{{requirement.expiryDate | date:'dd-MMMM-yyyy'}}</td>
-        <td>{{requirement.quantity }}</td>
-        <td>{{requirement.status }}</td> 
-        <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
-        <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
-  </tr>
-  </tbody>
-</table>
+    <!-- table code -->
+    <section class = "blue">
+        <div class="tbl-header">
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th><h1>Small-Scale-Name</h1></th>
+                        <th><h1>Requirement</h1></th>
+                        <th><h1>Expiry-Date</h1></th>
+                        <th><h1>Quantity</h1></th>
+                        <th><h1>Status</h1></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let requirement of requirements">
+                        <td>{{requirement.smallScaleName}}</td>
+                        <td>{{requirement.requirement}}</td>
+                        <td>{{requirement.expiryDate | date:'dd-MMMM-yyyy'}}</td>
+                        <td>{{requirement.quantity }}</td>
+                        <td>{{requirement.status }}</td> 
+                            <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
+                            <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </div>
-
