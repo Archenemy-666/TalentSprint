@@ -1,0 +1,37 @@
+<div>
+    <div class="navbar">
+        <a href="#" routerLink = "../smallScaleHome">Home</a>
+        <a href="#" routerLink = "../smallScaleMarket">Market</a>
+        <a href="#" routerLink = "../smallScaleCart">Cart</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- table code -->
+    <section class = "blue">
+        <div class="tbl-header">
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th><h1>Corporate-Name</h1></th>
+                        <th><h1>Requirement</h1></th>
+                        <th><h1>Quantity</h1></th>
+                        <th><h1>Expiry-Date</h1></th>
+                        <th><h1>Status</h1></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let cart of carts">
+                        <td>{{cart.corporateName}}</td>
+                        <td>{{cart.requirement}}</td>
+                        <td>{{cart.quantity }}</td>
+                        <td>{{cart.expiryDate | date:'dd-MMMM-yyyy'}}</td>
+                        <td>{{cart.status}}</td> 
+                            <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
+                            <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+

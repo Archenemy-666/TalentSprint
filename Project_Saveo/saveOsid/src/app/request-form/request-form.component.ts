@@ -13,11 +13,13 @@ export class RequestFormComponent implements OnInit {
 
   ngOnInit(): any {
     this.smallScaleName = SmallScaleLoginComponent.smallName ;
+
   }
 
   SubmitSmallScaleRequest(smallScaleRequestForm:any):any{
 
     // write tomorrow attach sprin and service methods 
+    smallScaleRequestForm.smallScaleName = this.smallScaleName ;
     this.service.registerSmallScaleReq(smallScaleRequestForm).subscribe((result:any) => console.log(result));
   }
 

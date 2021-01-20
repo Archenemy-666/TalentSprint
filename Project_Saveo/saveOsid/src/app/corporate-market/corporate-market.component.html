@@ -1,0 +1,39 @@
+<div>
+    <div class="navbar">
+        <a href="#" routerLink = "../smallScaleHome">Home</a>
+        <a href="#" routerLink = "../corporateMarket">Market</a>
+        <a href="#" routerLink = "../corporateCart">Cart</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- table code -->
+    <section class = "blue">
+        <div class="tbl-header">
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th><h1>Small-Scale-Name</h1></th>
+                        <th><h1>Requirement</h1></th>
+                        <th><h1>Expiry-Date</h1></th>
+                        <th><h1>Quantity</h1></th>
+                        <th><h1>Status</h1></th>
+                        <th><h1>Cart</h1></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let requirement of requirements">
+                        <td>{{requirement.smallScaleName}}</td>
+                        <td>{{requirement.requirement}}</td>
+                        <td>{{requirement.expiryDate | date:'dd-MMMM-yyyy'}}</td>
+                        <td>{{requirement.quantity }}</td>
+                        <td>{{requirement.status }}</td> 
+                        <td (click) = "addToCart(requirement)">add to cart</td>
+                            <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
+                            <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+

@@ -16,6 +16,10 @@ import { RequestFormComponent } from './request-form/request-form.component';
 import { CorporateHomeComponent } from './corporate-home/corporate-home.component';
 import { SmallScaleMarketComponent } from './small-scale-market/small-scale-market.component';
 import { HomeComponent } from './home/home.component';
+import { CorporateMarketComponent } from './corporate-market/corporate-market.component';
+import { CorporateCartComponent } from './corporate-cart/corporate-cart.component';
+import { SmallScaleCartComponent } from './small-scale-cart/small-scale-cart.component';
+import { core } from '@angular/compiler';
 
 const appRoot: Routes=[{path:'',component:HomeComponent},
 {path:'corporateRegister',component:CorporateRegisterComponent},
@@ -25,6 +29,9 @@ const appRoot: Routes=[{path:'',component:HomeComponent},
 {path:'requestForm',component:RequestFormComponent},
 {path:'smallScaleLogin',component:SmallScaleLoginComponent},
 {path:'smallScaleMarket',component:SmallScaleMarketComponent},
+{path:'corporateMarket',component:CorporateMarketComponent},
+{path:'corporateCart',component:CorporateCartComponent},
+{path:'smallScaleCart',component:SmallScaleCartComponent},
 {path:'corporateHome',component:CorporateHomeComponent}
 ];
 
@@ -41,7 +48,10 @@ const appRoot: Routes=[{path:'',component:HomeComponent},
     RequestFormComponent,
     CorporateHomeComponent,
     SmallScaleMarketComponent,
-    HomeComponent
+    HomeComponent,
+    CorporateMarketComponent,
+    CorporateCartComponent,
+    SmallScaleCartComponent
   ],
   imports: [
     BrowserModule,

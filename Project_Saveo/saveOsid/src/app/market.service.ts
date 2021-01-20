@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MarketService {
+  
 
   constructor(public httpClient: HttpClient) { }
   registerSmallScaleReq(smallScaleRequestForm: any):any {
@@ -15,5 +16,8 @@ export class MarketService {
 
   getAllRequirements():any {
     return this.httpClient.get('showAllRequirements');
+  }
+  addToCart(requirement: any):any {
+    return this.httpClient.post('corporateCart/',requirement);
   }
 }
