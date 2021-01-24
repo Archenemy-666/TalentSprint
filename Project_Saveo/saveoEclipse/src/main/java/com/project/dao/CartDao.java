@@ -24,4 +24,12 @@ public class CartDao {
         List<Cart> cart = cartRepository.findBySmallScaleName(smallScaleName);
         return cart;
     }
+
+    public void deleteRequest(Cart cart) {
+        cartRepository.delete(cart);
+    }
+
+    public void updateCart(Cart cart) {
+        cartRepository.save(cart);
+    }
 }

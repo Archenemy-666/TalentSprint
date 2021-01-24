@@ -17,67 +17,69 @@
 
 
 <!-- navbar -->
-<div class="navbar">
-    <a href="#">Home</a>
-    <div class="dropdown">
-      <button class="dropbtn">Corporate
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a routerLink = "../corporateRegister">CorporateRegister</a>
-        <a routerLink = "../corporateLogin">CorporateLogin</a>
-      </div>
-	</div>
-	<div class="dropdown">
-		<button class="dropbtn">SmallScale
-		  <i class="fa fa-caret-down"></i>
-		</button>
-		<div class="dropdown-content">
-		  <a routerLink = "../smallScaleRegister">SmallScaleRegister</a>
-		  <a routerLink = "../smallScaleLogin">SmallScaleLogin</a>
-		</div>
-	  </div>
-  </div>
-
-
-
-<body>
-<div class="page-body" >
-    <div class="auth-form-wrapper register-form-wrapper">
-        <form #corporateLoginForm="ngForm" (ngSubmit)="  SubmitCorporateDetails(corporateLoginForm.value)">
-        
-            <div class="form-header">
-                <h2 class="text-center">Corporate Login</h2>
+<div>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <div class="dropdown">
+        <button class="dropbtn">Corporate
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a routerLink = "../corporateRegister">CorporateRegister</a>
+            <a routerLink = "../corporateLogin">CorporateLogin</a>
+        </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">SmallScale
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a routerLink = "../smallScaleRegister">SmallScaleRegister</a>
+            <a routerLink = "../smallScaleLogin">SmallScaleLogin</a>
             </div>
-
-            <div class="form-row">
-                <div class="input-wrapper">
-                    <input id="corporateId" type="text" class="" name="corporateId" ngModel value="" required="" autofocus="">
-                    <label for="corporateId">Corporate HospitalId</label>
-                    <span class="icon-wrapper bg-primary">
-                        <i class="fas fa-user"></i>
-                    </span>
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="input-wrapper">
-                    <input id="password" type="password" class="" name="password" ngModel value="" required="" autofocus="">
-                    <label for="password">Password</label>
-                    <span class="icon-wrapper bg-primary">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                </div>
-            </div>
-
-            <div class="form-action">
-                <div>
-                    <button type="submit" class="btn btn-primary">
-                        Login
-                    </button>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
-</div> 
-</body>
+
+
+
+    <body>
+    <div class="page-body" >
+        <div class="auth-form-wrapper register-form-wrapper">
+            <form #corporateLoginForm="ngForm" (ngSubmit)="  SubmitCorporateDetails(corporateLoginForm.value)">
+            
+                <div class="form-header">
+                    <h2 class="text-center">Corporate Login</h2>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-wrapper">
+                        <input id="corporateId" type="text" class="" name="corporateId" ngModel value="" required="" autofocus="">
+                        <label for="corporateId">Corporate HospitalId</label>
+                        <span class="icon-wrapper bg-primary">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="input-wrapper">
+                        <input id="password" type="password" class="" name="password" ngModel value="" required="" autofocus="">
+                        <label for="password">Password</label>
+                        <span class="icon-wrapper bg-primary">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-action">
+                    <div>
+                        <button type="submit" class="btn btn-primary">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> 
+    </body>
+</div>

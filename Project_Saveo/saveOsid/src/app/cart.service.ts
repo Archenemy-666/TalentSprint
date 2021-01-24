@@ -17,4 +17,11 @@ export class CartService {
   getBySmallScaleName(smallScaleName: any):any {
     return this.httpClent.get('getCartDetailsBySmallName/'+smallScaleName);
   }
+  deleteReq(cart: any):any {
+    return this.httpClent.post('deleteReq/',cart);
+  }
+
+  updateCart(editObject: any):any {
+    return this.httpClent.post('updateCart',editObject);
+  }
 }

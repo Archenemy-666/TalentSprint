@@ -27,4 +27,14 @@ public class CartController {
         List<Cart> cart = cartDao.findBySmallScaleName(smallScaleName);
         return cart;
     }
+    @PostMapping("deleteReq/")
+    public void deleteReq(@RequestBody Cart cart){
+        System.out.println("cart deleted");
+        cartDao.deleteRequest(cart);
+    }
+    @PostMapping("/updateCart")
+    public void updateCart(@RequestBody Cart cart){
+        System.out.println("cart updated");
+        cartDao.updateCart(cart);
+    }
 }

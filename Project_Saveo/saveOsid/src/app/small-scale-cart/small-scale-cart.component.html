@@ -17,6 +17,9 @@
                         <th><h1>Quantity</h1></th>
                         <th><h1>Expiry-Date</h1></th>
                         <th><h1>Status</h1></th>
+                        <th><h1>Price</h1></th>
+                        <th><h1>Delete</h1></th>
+                        <th><h1>update</h1></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +28,11 @@
                         <td>{{cart.requirement}}</td>
                         <td>{{cart.quantity }}</td>
                         <td>{{cart.expiryDate | date:'dd-MMMM-yyyy'}}</td>
-                        <td>{{cart.status}}</td> 
+                        <td>{{cart.status}}</td>
+                        <td>{{cart.price}}</td>
+                        <td (click)="deleteRequest(cart)"><div class="glyphicon glyphicon-trash" ></div></td>
+                        <td (click)="showQuotationPopup(cart)"><div class="glyphicon glyphicon-pencil" ></div></td>
+              
                             <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
                             <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
                     </tr>
@@ -34,4 +41,29 @@
         </div>
     </section>
 </div>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<div class="container">
+    <div class="modal fade" id="cartModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        status:<input type="text" name="status" [(ngModel)]="editObject.status"><br/>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-sm" data-dismiss="modal" (click)="updateCart()">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
