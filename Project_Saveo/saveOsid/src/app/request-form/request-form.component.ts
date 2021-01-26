@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MarketService } from '../market.service';
 import { SmallScaleLoginComponent } from '../small-scale-login/small-scale-login.component';
 
@@ -9,7 +10,7 @@ import { SmallScaleLoginComponent } from '../small-scale-login/small-scale-login
 })
 export class RequestFormComponent implements OnInit {
   smallScaleName:any;
-  constructor(public service:MarketService) { }
+  constructor(public router:Router,public service:MarketService) { }
 
   ngOnInit(): any {
     this.smallScaleName = SmallScaleLoginComponent.smallName ;
@@ -18,9 +19,11 @@ export class RequestFormComponent implements OnInit {
 
   SubmitSmallScaleRequest(smallScaleRequestForm:any):any{
 
-    // write tomorrow attach sprin and service methods 
+    
     smallScaleRequestForm.smallScaleName = this.smallScaleName ;
     this.service.registerSmallScaleReq(smallScaleRequestForm).subscribe((result:any) => console.log(result));
+    this.router.navigate(['smallScaleHome']);
+    
   }
 
 }

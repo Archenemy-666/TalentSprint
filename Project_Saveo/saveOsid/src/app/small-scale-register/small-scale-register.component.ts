@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SmallScaleService } from '../small-scale.service';
 
 @Component({
@@ -8,13 +9,14 @@ import { SmallScaleService } from '../small-scale.service';
 })
 export class SmallScaleRegisterComponent implements OnInit {
 
-  constructor(public service:SmallScaleService) { }
+  constructor(public router:Router , public service:SmallScaleService) { }
 
   ngOnInit(): void {
   }
   registerSmallScale(smallScaleRegForm:any):any{
     console.log(smallScaleRegForm);
     this.service.registerSmallScale(smallScaleRegForm).subscribe((result :any) => console.log(result));
+    this.router.navigate(['smallScaleLogin'])
   }
 
 }

@@ -3,7 +3,8 @@
         <a href="#" routerLink = "../smallScaleHome">Home</a>
         <a href="#" routerLink = "../requestForm">RequestForm</a>
         <a href="#" routerLink = "../smallScaleMarket">Market</a>
-        <a href="#">Logout</a>
+        <a href="#" routerLink = "../smallScaleCart">Cart</a>
+        <a href="#" style="float: right;">Logout</a>
     </div>
 
     <!-- table code -->
@@ -16,7 +17,6 @@
                         <th><h1>Requirement</h1></th>
                         <th><h1>Expiry-Date</h1></th>
                         <th><h1>Quantity</h1></th>
-                        <th><h1>Status</h1></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,6 @@
                         <td>{{requirement.requirement}}</td>
                         <td>{{requirement.expiryDate | date:'dd-MMMM-yyyy'}}</td>
                         <td>{{requirement.quantity }}</td>
-                        <td>{{requirement.status }}</td> 
                             <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
                             <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
                     </tr>

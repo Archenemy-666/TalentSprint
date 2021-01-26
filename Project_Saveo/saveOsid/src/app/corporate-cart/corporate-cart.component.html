@@ -2,7 +2,7 @@
     <div class="navbar">
         <a href="#" routerLink = "../corporateHome">Home</a>
         <a href="#" routerLink = "../corporateMarket">Market</a>
-        <a href="#">Logout</a>
+        <a href="#" style="float: right;">Logout</a>
     </div>
 
     <!-- table code -->
@@ -27,8 +27,8 @@
                         <td>{{cart.quantity }}</td>
                         <td>{{cart.expiryDate | date:'dd-MMMM-yyyy'}}</td>
                         <td>{{cart.status }}</td> 
-                        <td (click)="deleteRequest(cart)"><div class="glyphicon glyphicon-trash" ></div></td>
                         <td (click)="showQuotationPopup(cart)"><div class="glyphicon glyphicon-pencil" ></div></td>
+                        <td (click)="deleteRequest(cart)"><div class="glyphicon glyphicon-trash" ></div></td>
                             <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
                             <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
                     </tr>
