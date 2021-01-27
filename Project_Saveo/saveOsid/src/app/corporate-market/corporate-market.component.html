@@ -1,39 +1,46 @@
-<div>
-    <div class="navbar">
-        <a href="#" routerLink = "../corporateHome">Home</a>
-        <a href="#" routerLink = "../corporateMarket">Market</a>
-        <a href="#" routerLink = "../corporateCart">Cart</a>
-        <a href="#" style="float: right;">Logout</a>
-    </div>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+    <div id = "background-image">
+        <div class="navbar">
+            <a href="#" routerLink = "../corporateHome">Home</a>
+            <a href="#" routerLink = "../corporateMarket">Market</a>
+            <a href="#" routerLink = "../corporateCart">Cart</a>
+            <a href="#" style="float: right;">Logout</a>
+        </div>
 
     <!-- table code -->
-    <section class = "blue">
-        <div class="tbl-header">
-            <table class="container">
-                <thead>
-                    <tr>
-                        <th><h1>Small-Scale-Name</h1></th>
-                        <th><h1>Requirement</h1></th>
-                        <th><h1>Expiry-Date</h1></th>
-                        <th><h1>Quantity</h1></th>
-                        <th><h1>Status</h1></th>
-                        <th><h1>Cart</h1></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr  *ngFor="let requirement of requirements">
-                        <td>{{requirement.smallScaleName}}</td>
-                        <td>{{requirement.requirement}}</td>
-                        <td>{{requirement.expiryDate | date:'dd-MMMM-yyyy'}}</td>
-                        <td>{{requirement.quantity }}</td>
-                        <td>{{requirement.status }}</td> 
-                        <td (click) = "addToCart(requirement)">add to cart</td>
-                            <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
-                            <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-</div>
+        <section class = "blue">
+            <div class="tbl-header">
+                <table class="container">
+                    <thead>
+                        <tr>
+                            <th><h1>Small-Scale-Name</h1></th>
+                            <th><h1>Requirement</h1></th>
+                            <th><h1>Expiry-Date</h1></th>
+                            <th><h1>Quantity</h1></th>
+                            <th><h1>Status</h1></th>
+                            <th><h1>Cart</h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  *ngFor="let requirement of requirements">
+                            <td>{{requirement.smallScaleName}}</td>
+                            <td>{{requirement.requirement}}</td>
+                            <td>{{requirement.expiryDate | date:'dd-MMMM-yyyy'}}</td>
+                            <td>{{requirement.quantity }}</td>
+                            <td>{{requirement.status }}</td> 
+                            <td (click) = "addToCart(requirement)">add to cart</td>
+                                <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
+                                <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+
 

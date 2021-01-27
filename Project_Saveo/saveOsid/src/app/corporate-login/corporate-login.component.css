@@ -19,7 +19,7 @@ body {
     width: 620px;
     padding: 40px 80px;
     transform: translate(-50%, -50%);
-    background: #132845a6;
+    background: #132845f2;
 }
 
 .text-center {
@@ -209,4 +209,11 @@ p.note > span {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+#background-image{
+  background-image: url('/assets/images/login2.jpeg') !important ; 
+  background-size: cover;
+  background-position: center center;
+  overflow: overlay;
+  height: 720px;
 }

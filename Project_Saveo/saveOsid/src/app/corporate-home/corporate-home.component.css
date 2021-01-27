@@ -126,3 +126,10 @@ body.dark .logo img {
     color: rgb(255, 255, 255); 
     font-family: Arial, Helvetica, sans-serif;
   }
+  #background-image{
+    background-image: url('/assets/images/home3e.jpeg') !important ; 
+    background-size: cover;
+    background-position: center center;
+    overflow: overlay;
+    height: 720px;
+  }
