@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ToastrModule} from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CorporateRegisterComponent } from './corporate-register/corporate-register.component';
@@ -20,6 +21,7 @@ import { CorporateMarketComponent } from './corporate-market/corporate-market.co
 import { CorporateCartComponent } from './corporate-cart/corporate-cart.component';
 import { SmallScaleCartComponent } from './small-scale-cart/small-scale-cart.component';
 import { core } from '@angular/compiler';
+import { PaymentComponent } from './payment/payment.component';
 
 const appRoot: Routes=[{path:'',component:HomeComponent},
 {path:'corporateRegister',component:CorporateRegisterComponent},
@@ -32,6 +34,7 @@ const appRoot: Routes=[{path:'',component:HomeComponent},
 {path:'corporateMarket',component:CorporateMarketComponent},
 {path:'corporateCart',component:CorporateCartComponent},
 {path:'smallScaleCart',component:SmallScaleCartComponent},
+{path:'payment',component:PaymentComponent},
 {path:'corporateHome',component:CorporateHomeComponent}
 ];
 
@@ -51,14 +54,17 @@ const appRoot: Routes=[{path:'',component:HomeComponent},
     HomeComponent,
     CorporateMarketComponent,
     CorporateCartComponent,
-    SmallScaleCartComponent
+    SmallScaleCartComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(appRoot),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

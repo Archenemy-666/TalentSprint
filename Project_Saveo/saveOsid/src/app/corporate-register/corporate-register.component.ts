@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CorporateServiceService } from '../corporate-service.service';
 
 @Component({
@@ -11,8 +12,7 @@ import { CorporateServiceService } from '../corporate-service.service';
 export class CorporateRegisterComponent implements OnInit {
 
   corporateHosp:any;
-  constructor(public router:Router , public service :CorporateServiceService) {
-    
+  constructor(public toastr:ToastrService , public router:Router , public service :CorporateServiceService) {
    }
 
   ngOnInit(): void {
@@ -22,6 +22,7 @@ export class CorporateRegisterComponent implements OnInit {
     console.log(corporateRegForm);
 
     this.service.registerCorporate(corporateRegForm).subscribe((result:any) => console.log(result));
+    this.toastr.success('Corporate is now Registered','Corporate Register');
     this.router.navigate(['corporateLogin']);
   }
 

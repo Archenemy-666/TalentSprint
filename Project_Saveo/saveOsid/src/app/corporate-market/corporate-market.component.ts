@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CorporateLoginComponent } from '../corporate-login/corporate-login.component';
 import { MarketService } from '../market.service';
 
@@ -12,7 +13,7 @@ export class CorporateMarketComponent implements OnInit {
   requirements:any;
   corporateName:any;
 
-  constructor(public router:Router,public service:MarketService) { }
+  constructor(public toastr:ToastrService,public router:Router,public service:MarketService) { }
 
   ngOnInit(): void {
     this.service.getAllRequirements().subscribe((data:any) => {this.requirements=data;  console.log(data);});
@@ -23,7 +24,8 @@ export class CorporateMarketComponent implements OnInit {
     this.corporateName = CorporateLoginComponent.corporateName;
     requirement.corporateName = this.corporateName;
     this.service.addToCart(requirement).subscribe((data:any) => console.log(data));
-    return alert('sent');
+    this.toastr.success('added to cart','Corporate Cart');
+    
   }
 
 }

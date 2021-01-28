@@ -16,7 +16,7 @@ export class CorporateServiceService {
     return this.httpClient.post('registerCorp/',corporateRegForm);
   }
 
-  corporateLoginAuthentication(corporateId: any, password: any): any{
+  corporateLoginAuthentication(corporateId: any, password: any){
     return this.httpClient.get('getCorporateDetails/'+ corporateId + '/' + password );
   }
 }

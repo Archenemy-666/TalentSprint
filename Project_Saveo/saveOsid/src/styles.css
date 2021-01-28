@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 ::-webkit-scrollbar{
-    background: transparent !important;
+
+    background-color:black !important ;
   }
   
   ::-webkit-scrollbar-thumb{

@@ -53,7 +53,13 @@
   
                        price:<input type="number" name="price" [(ngModel)]="editObject.price"><br/>
                         
-                       status:<input type="text" name="status" [(ngModel)]="editObject.status"><br/>
+                       <!-- status:<input type="text" name="status" [(ngModel)]="editObject.status"><br/> -->
+                       status:
+                       <select name="status" id="status" [(ngModel)]="editObject.status">
+                        <option value="request accepted">request accepted</option>
+                        <option value="delivery sent">delivery sent</option>
+                        <option value="transaction completed">recieved payment</option>
+                      </select><br/>
                         
                       corporateContact:<input type="text" name="corporateContact" [(ngModel)]="editObject.corporateContact"><br/>
                     </div>

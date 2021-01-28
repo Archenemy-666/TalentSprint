@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../cart.service';
 import { SmallScaleLoginComponent } from '../small-scale-login/small-scale-login.component';
 
@@ -13,7 +15,7 @@ export class SmallScaleCartComponent implements OnInit {
   carts:any;
   smallScaleName:any;
   editObject:any;
-  constructor(public service:CartService) { }
+  constructor(public toastr:ToastrService, public service:CartService , public router:Router) { }
 
   ngOnInit(): void {
     this.smallScaleName = SmallScaleLoginComponent.smallName;
@@ -24,7 +26,7 @@ export class SmallScaleCartComponent implements OnInit {
   deleteRequest(cart:any):any{
     this.service.deleteReq(cart).subscribe((data:any) => {
      const i=this.carts.findIndex((record:any) => {
-   return  console.log(record); 
+    return  this.toastr.warning('deleted request','delete');
      })
      this.carts.splice(i,1);     
      });  } 
@@ -36,6 +38,10 @@ export class SmallScaleCartComponent implements OnInit {
     updateCart():void{
       console.log(this.editObject);
       this.service.updateCart(this.editObject).subscribe();
+      this.toastr.info('info updated','update');
+    }
+    payment(cart : any):any{
+      return this.router.navigate(['payment']);
     }
 
 }

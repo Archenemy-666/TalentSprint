@@ -23,7 +23,7 @@ public class CorporateController {
 	@RequestMapping("/getCorporateDetails/{corporateId}/{password}")
 	public Corporate getCorporateDetails(@PathVariable("corporateId") String corporateId,@PathVariable("password") String password){
 		Corporate corporate = corporateDao.getCorporateById(corporateId);
-		if(corporate.getPassword().equalsIgnoreCase(password)){
+		if(password.equalsIgnoreCase(corporate.getPassword())){
 			return corporate ;
 		}
 		return null;

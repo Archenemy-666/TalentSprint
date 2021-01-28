@@ -55,7 +55,7 @@
 
             <div class="form-row">
                 <div class="input-wrapper">
-                    <input id="smallScaleName" type="text" class="" name="smallScaleName" ngModel value="" required="" autofocus="">
+                    <input id="smallScaleName" type="text" class="" name="smallScaleName" ngModel value="" required autofocus="">
                     <label for="smallScaleName">smallScaleName</label>
                     <span class="icon-wrapper bg-primary">
                         <i class="fas fa-user"></i>
@@ -65,7 +65,7 @@
 
             <div class="form-row">
                 <div class="input-wrapper">
-                    <input id="smallScaleId" type="text" class="" name="smallScaleId" ngModel value="" required="" autofocus="">
+                    <input id="smallScaleId" type="text" class="" name="smallScaleId" ngModel value="" required autofocus="">
                     <label for="smallScaleId">SmallScale HospitalId</label>
                     <span class="icon-wrapper bg-primary">
                         <i class="fas fa-user"></i>
@@ -75,7 +75,7 @@
 
             <div class="form-row">
                 <div class="input-wrapper">
-                    <input id="location" type="text" class="" name="location" ngModel value="" required="" autofocus="">
+                    <input id="location" type="text" class="" name="location" ngModel value="" required autofocus="">
                     <label for="location">Location</label>
                     <span class="icon-wrapper bg-primary">
                         <i class="fas fa-user"></i>
@@ -85,7 +85,7 @@
 
             <div class="form-row">
                 <div class="input-wrapper">
-                    <input id="contact" type="number" class="" name="contact" ngModel value="" required="" autofocus="">
+                    <input id="contact" type="number" class="" name="contact" ngModel value="" required autofocus="">
                     <label for="contact">contact</label>
                     <span class="icon-wrapper bg-primary">
                         <i class="fas fa-user"></i>
@@ -95,7 +95,7 @@
 
             <div class="form-row">
                 <div class="input-wrapper">
-                    <input id="emailId" type="text" class="" name="emailId" ngModel value="" required="" autofocus="">
+                    <input id="emailId" type="text" class="" name="emailId" ngModel value="" required autofocus="">
                     <label for="emailId">EmailId</label>
                     <span class="icon-wrapper bg-primary">
                         <i class="fas fa-user"></i>
@@ -105,7 +105,7 @@
             
             <div class="form-row">
                 <div class="input-wrapper">
-                    <input id="password" type="password" class="" name="password" ngModel value="" required="" autofocus="">
+                    <input id="password" type="password" class="" name="password" ngModel value="" required autofocus="">
                     <label for="password">Password</label>
                     <span class="icon-wrapper bg-primary">
                         <i class="fas fa-lock"></i>
@@ -115,7 +115,7 @@
 
             <div class="form-action">
                 <div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" [disabled] = "!smallScaleRegForm.valid">
                         Register
                     </button>
                 </div>

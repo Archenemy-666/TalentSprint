@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../cart.service';
 import { CorporateLoginComponent } from '../corporate-login/corporate-login.component';
 
@@ -13,7 +14,7 @@ export class CorporateCartComponent implements OnInit {
   carts:any;
   corporateName:any;
   editObject:any;
-  constructor(public service:CartService) { }
+  constructor(public toastr:ToastrService,  public service:CartService) { }
 
   ngOnInit(): void {
     this.corporateName = CorporateLoginComponent.corporateName;
@@ -24,7 +25,7 @@ export class CorporateCartComponent implements OnInit {
   deleteRequest(cart:any):any{
     this.service.deleteReq(cart).subscribe((data:any) => {
      const i=this.carts.findIndex((record:any) => {
-   return  console.log(record); 
+   return  this.toastr.warning('deleted request','delete'); 
      })
      this.carts.splice(i,1);     
      });
@@ -38,6 +39,7 @@ export class CorporateCartComponent implements OnInit {
    updateCart():void{
      console.log(this.editObject);
      this.service.updateCart(this.editObject).subscribe();
+     this.toastr.info('info updated','update');
    }
 
 }

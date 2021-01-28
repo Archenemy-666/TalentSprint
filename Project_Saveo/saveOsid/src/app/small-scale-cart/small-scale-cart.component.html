@@ -21,6 +21,7 @@
                         <th><h1>Price</h1></th>
                         <th><h1>Delete</h1></th>
                         <th><h1>update</h1></th>
+                        <th><h1>Pay</h1></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +34,7 @@
                         <td>{{cart.price}}</td>
                         <td (click)="deleteRequest(cart)"><div class="glyphicon glyphicon-trash" ></div></td>
                         <td (click)="showQuotationPopup(cart)"><div class="glyphicon glyphicon-pencil" ></div></td>
-              
+                        <td (click)="payment(cart)"><div class="glyphicon glyphicon-pencil" ></div></td>
                             <!-- <td><button (click)="showEditPopup(employee)" class="glyphicon glyphicon-pencil"></button></td>
                             <td><button (click)="deleteEmp(employee)" class="glyphicon glyphicon-trash"></button></td> -->
                     </tr>
@@ -55,7 +56,12 @@
                 </div>
                 <form>
                     <div class="modal-body">
-                        status:<input type="text" name="status" [(ngModel)]="editObject.status"><br/>
+                        <!-- status:<input type="text" name="status" [(ngModel)]="editObject.status"><br/> -->
+                        <select name="status" id="status" [(ngModel)]="editObject.status">
+                            <option value="send delivery">send delivery</option>
+                            <option value="delivery recieved">recieved</option>
+                            <option value="paid">Paid</option>
+                          </select>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-primary btn-sm" data-dismiss="modal" (click)="updateCart()">Update</button>

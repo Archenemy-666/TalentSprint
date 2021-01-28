@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { MarketService } from '../market.service';
 import { SmallScaleLoginComponent } from '../small-scale-login/small-scale-login.component';
 
@@ -10,7 +11,7 @@ import { SmallScaleLoginComponent } from '../small-scale-login/small-scale-login
 })
 export class RequestFormComponent implements OnInit {
   smallScaleName:any;
-  constructor(public router:Router,public service:MarketService) { }
+  constructor(public toastr:ToastrService ,public router:Router,public service:MarketService) { }
 
   ngOnInit(): any {
     this.smallScaleName = SmallScaleLoginComponent.smallName ;
@@ -22,6 +23,7 @@ export class RequestFormComponent implements OnInit {
     
     smallScaleRequestForm.smallScaleName = this.smallScaleName ;
     this.service.registerSmallScaleReq(smallScaleRequestForm).subscribe((result:any) => console.log(result));
+    this.toastr.info('the request is added to market','requestForm');
     this.router.navigate(['smallScaleHome']);
     
   }
